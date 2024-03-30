@@ -1,0 +1,19 @@
+{
+    "name": "@android/engage-sdk",
+    "version": "1.0.0",
+    "exports": {
+        "types": "./dist/src/index.d.ts",
+        "import": "./dist/main.js",
+        "require": "./dist/main.cjs"
+    },
+    "scripts": {
+        "build": "rm -rf ./dist && tsc && tsup"
+    },
+    "author": "Vighnesh Raut",
+    "license": "MIT",
+    "dependencies": {
+        "@types/node": "*",
+        "tsup": "^8.0.2",
+        "typescript": "^5.4.2"
+    }
+}
