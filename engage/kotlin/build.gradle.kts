@@ -1,6 +1,13 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        google()
+    }
+}
+
 allprojects {
     repositories {
-        // Use Maven Central for resolving dependencies.
         mavenCentral()
+        google()
     }
 }
