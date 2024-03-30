@@ -21,3 +21,4 @@ plugins {
 
 rootProject.name = "engage-js-wrapper"
 include("converter")
+include("testapp")
