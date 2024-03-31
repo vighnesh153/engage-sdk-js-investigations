@@ -1,6 +1,7 @@
 package com.google.android.engage.js.testapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
@@ -24,6 +25,8 @@ import com.google.android.engage.js.converter.dto.common.RatingSystem
 import com.google.android.engage.js.converter.dto.common.WatchNextType
 import com.google.android.engage.js.converter.dto.entities.MovieEntity
 import com.google.android.engage.js.converter.dto.service.PublishContinuationClusterRequest
+import kotlinx.serialization.json.Json
+import kotlinx.serialization.encodeToString
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -98,6 +101,8 @@ fun App() {
             )
         )
 
+        Log.d(TAG, Json.encodeToString(continuationClusterRequest))
+        
         val engagePublishContinuationClusterRequest = continuationClusterRequest
             .toEngagePublishContinuationClusterRequest()
     }

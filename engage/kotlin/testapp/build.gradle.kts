@@ -2,6 +2,8 @@ plugins {
     // Apply the org.jetbrains.kotlin.jvm Plugin to add support for Kotlin.
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+
+    kotlin("plugin.serialization") version libs.versions.kotlin
 }
 
 android {
@@ -36,6 +38,8 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.8.2")
 
     implementation(project(":converter"))
+
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0")
 
     val composeVersion = "1.6.4"
     implementation("androidx.compose.animation:animation:$composeVersion")

@@ -6,6 +6,8 @@
         "import": "./dist/main.js",
         "require": "./dist/main.cjs"
     },
+    "main": "./dist/main.js",
+    "types": "./dist/src/index.d.ts",
     "scripts": {
         "build": "rm -rf ./dist && tsc && tsup"
     },

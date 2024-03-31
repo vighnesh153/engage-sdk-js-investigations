@@ -24,7 +24,7 @@ export interface TvEpisodeEntity extends VideoEntity {
 }
 
 interface InternalTvEpisodeEntity extends TvEpisodeEntity, InternalEntity {
-  entityType: "com.google.android.engage.js.converter.dto.entities.TvEpisodeEntity";
+  type: "com.google.android.engage.js.converter.dto.entities.TvEpisodeEntity";
 }
 
 export function buildTvEpisodeEntity(
@@ -32,7 +32,6 @@ export function buildTvEpisodeEntity(
 ): InternalTvEpisodeEntity {
   return {
     ...tvEpisodeEntity,
-    entityType:
-      "com.google.android.engage.js.converter.dto.entities.TvEpisodeEntity",
+    type: "com.google.android.engage.js.converter.dto.entities.TvEpisodeEntity",
   };
 }

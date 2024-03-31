@@ -19,7 +19,7 @@ export interface MovieEntity extends VideoEntity {
 }
 
 interface InternalMovieEntity extends MovieEntity, InternalEntity {
-  entityType: "com.google.android.engage.js.converter.dto.entities.MovieEntity";
+  type: "com.google.android.engage.js.converter.dto.entities.MovieEntity";
 }
 
 export function buildMovieEntity(
@@ -27,7 +27,6 @@ export function buildMovieEntity(
 ): InternalMovieEntity {
   return {
     ...movieEntity,
-    entityType:
-      "com.google.android.engage.js.converter.dto.entities.MovieEntity",
+    type: "com.google.android.engage.js.converter.dto.entities.MovieEntity",
   };
 }
